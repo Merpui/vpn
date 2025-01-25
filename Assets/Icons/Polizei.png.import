@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b65k7cd6wdpxw"
-path="res://.godot/imported/Kreditkarte.png-9ca814980cd49f0125f9d7f31c283438.ctex"
+uid="uid://dwa5bj1b5qsl7"
+path="res://.godot/imported/Polizei.png-830f1d57cd67326d75c6dc37eea9802b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Kreditkarte.png"
-dest_files=["res://.godot/imported/Kreditkarte.png-9ca814980cd49f0125f9d7f31c283438.ctex"]
+source_file="res://Assets/Icons/Polizei.png"
+dest_files=["res://.godot/imported/Polizei.png-830f1d57cd67326d75c6dc37eea9802b.ctex"]
 
 [params]
 

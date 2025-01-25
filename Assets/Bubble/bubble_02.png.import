@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3kat50um6o6h"
-path="res://.godot/imported/Coin.png-6144d022cc35aedfb7de59542062cb6a.ctex"
+uid="uid://cp43rism4rlqc"
+path="res://.godot/imported/bubble_02.png-09c7b0a20886152a76da0e803974fbc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Coin.png"
-dest_files=["res://.godot/imported/Coin.png-6144d022cc35aedfb7de59542062cb6a.ctex"]
+source_file="res://Assets/Bubble/bubble_02.png"
+dest_files=["res://.godot/imported/bubble_02.png-09c7b0a20886152a76da0e803974fbc7.ctex"]
 
 [params]
 

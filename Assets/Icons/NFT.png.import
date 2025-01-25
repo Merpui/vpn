@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp43rism4rlqc"
-path="res://.godot/imported/bubble_02.png-414a188ee99c1e36acbae6622dde2a94.ctex"
+uid="uid://dqtsxtybv3e3y"
+path="res://.godot/imported/NFT.png-496f6623e0942e54ff63fa5a01c52547.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bubble_02.png"
-dest_files=["res://.godot/imported/bubble_02.png-414a188ee99c1e36acbae6622dde2a94.ctex"]
+source_file="res://Assets/Icons/NFT.png"
+dest_files=["res://.godot/imported/NFT.png-496f6623e0942e54ff63fa5a01c52547.ctex"]
 
 [params]
 

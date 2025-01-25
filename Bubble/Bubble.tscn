@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://d3xyepkch68lm"]
 
 [ext_resource type="Script" path="res://Bubble/bubble.gd" id="1_3c152"]
-[ext_resource type="Texture2D" uid="uid://cp43rism4rlqc" path="res://Assets/bubble_02.png" id="1_ci6d2"]
-[ext_resource type="Texture2D" uid="uid://d3kat50um6o6h" path="res://Assets/Coin.png" id="2_ek7fx"]
+[ext_resource type="Texture2D" uid="uid://cp43rism4rlqc" path="res://Assets/Bubble/bubble_02.png" id="1_ci6d2"]
+[ext_resource type="Texture2D" uid="uid://d3kat50um6o6h" path="res://Assets/Icons/Coin.png" id="2_ek7fx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bp4d5"]
-radius = 600.0
+radius = 658.012
 
 [node name="Bubble" type="Area2D"]
 script = ExtResource("1_3c152")
@@ -19,7 +19,6 @@ texture = ExtResource("2_ek7fx")
 
 [node name="Bubble" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.5)
-scale = Vector2(1, 1)
 texture = ExtResource("1_ci6d2")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

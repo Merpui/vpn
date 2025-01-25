@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwa5bj1b5qsl7"
-path="res://.godot/imported/Polizei.png-ed7d04f93789963f43824586dcf95795.ctex"
+uid="uid://dusjwmmkfoiat"
+path="res://.godot/imported/Oma.png-b35f5fba212fbcee953853c63bdab121.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Polizei.png"
-dest_files=["res://.godot/imported/Polizei.png-ed7d04f93789963f43824586dcf95795.ctex"]
+source_file="res://Assets/Icons/Oma.png"
+dest_files=["res://.godot/imported/Oma.png-b35f5fba212fbcee953853c63bdab121.ctex"]
 
 [params]
 

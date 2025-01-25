@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c04lryghoy1it"
-path="res://.godot/imported/Telefon.png-a922b261bd51e5ebf9133eca27923c37.ctex"
+uid="uid://b65k7cd6wdpxw"
+path="res://.godot/imported/Kreditkarte.png-5464fb24f398a402940a56ab39f6a547.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Telefon.png"
-dest_files=["res://.godot/imported/Telefon.png-a922b261bd51e5ebf9133eca27923c37.ctex"]
+source_file="res://Assets/Icons/Kreditkarte.png"
+dest_files=["res://.godot/imported/Kreditkarte.png-5464fb24f398a402940a56ab39f6a547.ctex"]
 
 [params]
 
