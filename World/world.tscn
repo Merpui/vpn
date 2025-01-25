@@ -5,6 +5,3 @@
 [node name="World" type="Node2D"]
 
 [node name="Spawner" parent="." instance=ExtResource("1_v54kk")]
-
-[node name="Spawner2" parent="." instance=ExtResource("1_v54kk")]
-position = Vector2(494, 380)
