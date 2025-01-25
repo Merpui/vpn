@@ -1,25 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3xyepkch68lm"]
+[gd_scene load_steps=7 format=3 uid="uid://d3xyepkch68lm"]
 
 [ext_resource type="Script" path="res://Bubble/bubble.gd" id="1_3c152"]
 [ext_resource type="Texture2D" uid="uid://cp43rism4rlqc" path="res://Assets/Bubble/bubble_02.png" id="1_ci6d2"]
+[ext_resource type="PackedScene" uid="uid://dgh3hm3v5ex2b" path="res://Bubble/CircleShape.tscn" id="2_4frve"]
 [ext_resource type="Texture2D" uid="uid://d3kat50um6o6h" path="res://Assets/Icons/Coin.png" id="2_ek7fx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bp4d5"]
-radius = 658.012
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l801r"]
+friction = 5.0
+bounce = 1.0
+absorbent = true
 
-[node name="Bubble" type="Area2D"]
-scale = Vector2(0.1, 0.1)
+[sub_resource type="CircleShape2D" id="CircleShape2D_a7wor"]
+resource_local_to_scene = true
+
+[node name="Bubble" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_l801r")
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 1
+linear_damp = 0.75
 script = ExtResource("1_3c152")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_bp4d5")
-
-[node name="Icon" type="Sprite2D" parent="."]
-z_index = 1
-texture = ExtResource("2_ek7fx")
+[node name="CircleShape" parent="." instance=ExtResource("2_4frve")]
+shape = SubResource("CircleShape2D_a7wor")
 
 [node name="Bubble" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.5)
 texture = ExtResource("1_ci6d2")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_ek7fx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

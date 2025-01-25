@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgh3hm3v5ex2b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7o6e0"]
+resource_local_to_scene = true
+
+[node name="CircleShape" type="CollisionShape2D"]
+shape = SubResource("CircleShape2D_7o6e0")
