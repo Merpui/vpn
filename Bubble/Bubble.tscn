@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3xyepkch68lm"]
+[gd_scene load_steps=9 format=3 uid="uid://d3xyepkch68lm"]
 
 [ext_resource type="Script" path="res://Bubble/bubble.gd" id="1_3c152"]
 [ext_resource type="Texture2D" uid="uid://cp43rism4rlqc" path="res://Assets/Bubble/bubble_02.png" id="1_ci6d2"]
 [ext_resource type="PackedScene" uid="uid://dgh3hm3v5ex2b" path="res://Bubble/CircleShape.tscn" id="2_4frve"]
 [ext_resource type="Texture2D" uid="uid://d3kat50um6o6h" path="res://Assets/Icons/Coin.png" id="2_ek7fx"]
+[ext_resource type="AudioStream" uid="uid://bm13rhuei6sje" path="res://Sounds/bubble-sound-43207.ogg" id="5_aahcr"]
+[ext_resource type="AudioStream" uid="uid://cy8jsucmvgfwc" path="res://Sounds/cash-register-kaching-sound-effect-125042.mp3" id="6_7a6fp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l801r"]
 friction = 5.0
@@ -30,5 +32,11 @@ texture = ExtResource("1_ci6d2")
 
 [node name="Icon" type="Sprite2D" parent="."]
 texture = ExtResource("2_ek7fx")
+
+[node name="Pop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_aahcr")
+
+[node name="Cash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7a6fp")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

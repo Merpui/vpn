@@ -23,5 +23,5 @@ func spawn_bubbles_in_row():
 		
 		var current_bubble = bubble_scene.instantiate()
 		current_bubble.position = Vector2(spawn_x, spawn_y);
-		current_bubble.object_type = randi_range(1, 3)
+		current_bubble.object_type = randi_range(1, 5)
 		add_child(current_bubble)

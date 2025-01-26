@@ -5,6 +5,8 @@ extends Node2D
 
 func _ready() -> void:
 	GlobalVariables.scores_updated.connect(Callable(self, "_on_scores_updated"))
+	$Music.play()
+	$Keyboard.play()
 
 func _input(event:InputEvent) -> void:
 	if event is InputEventMouseButton and GlobalVariables.isAlive:
@@ -15,7 +17,7 @@ func _input(event:InputEvent) -> void:
 				action = 0;
 				for bubble in $Spawner.get_children():
 					bubble.freeze = true
-					bubble.global_position.y += 100
+					bubble.global_position.y += GlobalVariables.waveDistance
 					bubble.linear_velocity = Vector2.ZERO
 					bubble.gravity_scale = 0
 					bubble.gravity_scale = 1
@@ -23,20 +25,13 @@ func _input(event:InputEvent) -> void:
 				for bubble in $Player.get_children():
 					if(bubble.linear_velocity.length() < 25):
 						bubble.freeze = true
-						bubble.global_position.y += 100
+						bubble.global_position.y += GlobalVariables.waveDistance
 						bubble.linear_velocity = Vector2.ZERO
 						bubble.gravity_scale = 0
 						bubble.gravity_scale = 1
 						bubble.freeze = false
 				$Spawner.startRound();
 
-#func _process(delta):
-	#for bubbleCheck in $Spawner.get_children():
-		#if(bubbleCheck.position.y >= 1000):
-			#globalVars.isAlive = false;
-	#for bubbleCheck in $Player.get_children():
-		#if(bubbleCheck.position.y >= 1000):
-			#globalVars.isAlive = false;
 
 
 func _on_scores_updated():

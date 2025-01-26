@@ -51,8 +51,13 @@ func grow_bubble(delta: float):
 	if growth_size >= target_size:
 		is_merging = false
 
-	if growth_size >= max_size:
+	if growth_size >= (max_size - (GlobalVariables.bubbleSize * 0.01)):
 		GlobalVariables.update_scores()
+		$Pop.play()
+		$Cash.play()
+		visible = false
+		$CircleShape.disabled = true
+		await $Cash.finished
 		queue_free()
 
 func update_size():
@@ -69,6 +74,10 @@ func update_color():
 			bubble_sprite.modulate = Color(0, 1, 0)  # Green
 		3:
 			bubble_sprite.modulate = Color(0, 0, 1)  # Blue
+		4:
+			bubble_sprite.modulate = Color(1, 0, 1)  # 
+		5:
+			bubble_sprite.modulate = Color(0, 1, 1)  # 
 		_:
 			bubble_sprite.modulate = Color(1, 1, 1)  # White (default)
 

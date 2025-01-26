@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://bcd248rxd4534"]
 
-[ext_resource type="Texture2D" uid="uid://4byjg2tiws0t" path="res://Assets/Screens/Start_Screen.png" id="1_4wp2w"]
 [ext_resource type="Script" path="res://StartScreen/start_screen.gd" id="1_dqa46"]
 [ext_resource type="Texture2D" uid="uid://dyg7f2kn71kkt" path="res://Assets/Resources/Logo.png" id="2_ee6i8"]
+[ext_resource type="Texture2D" uid="uid://dddtrgeoxfvio" path="res://Assets/Screens/Start_Screen2.jpg" id="2_mifgt"]
 [ext_resource type="Texture2D" uid="uid://dufieci7c2dpc" path="res://Assets/UI/Menu_Button.png" id="3_03qqk"]
 [ext_resource type="FontFile" uid="uid://m7xxwrur14nr" path="res://Fonts/Hacked-KerX.ttf" id="4_6w3kg"]
 [ext_resource type="Texture2D" uid="uid://d3kat50um6o6h" path="res://Assets/Icons/Coin.png" id="6_pebo7"]
@@ -14,7 +14,7 @@ script = ExtResource("1_dqa46")
 
 [node name="BG" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("1_4wp2w")
+texture = ExtResource("2_mifgt")
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(538, 270)
