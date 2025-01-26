@@ -2,10 +2,11 @@ extends RigidBody2D
 
 class_name Bubble
 
+@export var newBubble = false;
 @export var object_type: int = 1
-@export var growth_size: float = 0.1
+@export var growth_size: float = 0.05
 @export var growth_factor: float = 0.05
-@export var max_size: float = 0.3
+@export var max_size: float = 0.2
 @export var size_factor: int = 650
 
 @onready var bubble_sprite = $Bubble
@@ -90,7 +91,7 @@ func set_icon():
 
 # Handle collision
 func _on_body_entered(body: Node):
-	print("Colliding...")
+	#print("Colliding...")
 	if body is Bubble and not is_merging:
 		if object_type == body.object_type:
 			merge_with(body)

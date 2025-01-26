@@ -1,13 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://5p2at4lcwmm1"]
+[gd_scene load_steps=9 format=3 uid="uid://5p2at4lcwmm1"]
 
 [ext_resource type="Texture2D" uid="uid://4byjg2tiws0t" path="res://Assets/Screens/Start_Screen.png" id="1_exh2v"]
 [ext_resource type="Script" path="res://World/world.gd" id="1_iq0jr"]
 [ext_resource type="PackedScene" uid="uid://cm5tu5ig22sdt" path="res://Spawner/Spawner.tscn" id="1_v54kk"]
 [ext_resource type="PackedScene" uid="uid://phv4eypdx7wt" path="res://Player/Player.tscn" id="2_1fhvi"]
 [ext_resource type="Texture2D" uid="uid://b25grbq4803oc" path="res://Assets/Icons/Pop_Up.png" id="4_rigfw"]
-[ext_resource type="Script" path="res://World/camera_2d.gd" id="5_kt3vv"]
-[ext_resource type="Texture2D" uid="uid://dtb5e2fjitapv" path="res://Assets/Screens/Lose_Screen.png" id="6_5nl1a"]
-[ext_resource type="Script" path="res://World/GameOverArea.gd" id="8_neo0e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hd2ye"]
 size = Vector2(82.0847, 79.8749)
@@ -16,12 +13,10 @@ size = Vector2(82.0847, 79.8749)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_etptc"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jp8xu"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjur8"]
-
 [node name="World" type="Node2D"]
 script = ExtResource("1_iq0jr")
+action = null
+round = null
 
 [node name="StartScreen" type="Sprite2D" parent="."]
 position = Vector2(961, 545)
@@ -35,7 +30,6 @@ position = Vector2(662, 1057)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(956, 546)
-script = ExtResource("5_kt3vv")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1566, 545)
@@ -100,20 +94,3 @@ position = Vector2(1123, 1)
 rotation = 3.14159
 scale = Vector2(3.69284, 3.0163)
 shape = SubResource("WorldBoundaryShape2D_etptc")
-
-[node name="LoseScreen" type="Sprite2D" parent="."]
-position = Vector2(4009, 534)
-texture = ExtResource("6_5nl1a")
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(662, 1058)
-scale = Vector2(16.9857, 17.3108)
-script = ExtResource("8_neo0e")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_jp8xu")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 3.35051)
-scale = Vector2(2.77408, 0.173228)
-shape = SubResource("RectangleShape2D_jjur8")
