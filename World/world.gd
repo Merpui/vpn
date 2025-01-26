@@ -4,7 +4,7 @@ extends Node2D
 @export var cur_round = 0;
 
 func _ready() -> void:
-	pass # Replace with function body.
+	GlobalVariables.scores_updated.connect(Callable(self, "_on_scores_updated"))
 
 func _input(event:InputEvent) -> void:
 	if event is InputEventMouseButton and GlobalVariables.isAlive:
@@ -37,3 +37,7 @@ func _input(event:InputEvent) -> void:
 	#for bubbleCheck in $Player.get_children():
 		#if(bubbleCheck.position.y >= 1000):
 			#globalVars.isAlive = false;
+
+
+func _on_scores_updated():
+	$Score.update_score()

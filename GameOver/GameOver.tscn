@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bolpbd32tu3n7"]
+
+[ext_resource type="Texture2D" uid="uid://dtb5e2fjitapv" path="res://Assets/Screens/Lose_Screen.png" id="1_8n1ae"]
+[ext_resource type="Script" path="res://GameOver/game_over.gd" id="1_iknkh"]
+[ext_resource type="PackedScene" uid="uid://dqtnkbxhmpihe" path="res://Score/Score.tscn" id="2_d584h"]
+[ext_resource type="Texture2D" uid="uid://dufieci7c2dpc" path="res://Assets/UI/Menu_Button.png" id="4_48x3n"]
+[ext_resource type="FontFile" uid="uid://m7xxwrur14nr" path="res://Fonts/Hacked-KerX.ttf" id="5_phnel"]
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_iknkh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8n1ae")
+offset = Vector2(960, 540)
+
+[node name="Score" parent="." instance=ExtResource("2_d584h")]
+position = Vector2(850, 350)
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 756.0
+offset_top = 734.0
+offset_right = 1161.0
+offset_bottom = 1151.0
+texture_normal = ExtResource("4_48x3n")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 139.0
+offset_right = 372.0
+offset_bottom = 274.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_phnel")
+theme_override_font_sizes/font_size = 96
+text = "RESTART"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

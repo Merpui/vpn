@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqtnkbxhmpihe"]
+
+[ext_resource type="Script" path="res://Score/score.gd" id="1_dlowu"]
+[ext_resource type="FontFile" uid="uid://m7xxwrur14nr" path="res://Fonts/Hacked-KerX.ttf" id="1_hejtj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oar2v"]
+
+[node name="Score" type="Node2D"]
+script = ExtResource("1_dlowu")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hejtj")
+theme_override_font_sizes/font_size = 96
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oar2v")
+text = "SCORE"
+
+[node name="Score" type="Label" parent="."]
+offset_top = 106.0
+offset_right = 232.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hejtj")
+theme_override_font_sizes/font_size = 96
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oar2v")
+text = "0
+"
+horizontal_alignment = 1

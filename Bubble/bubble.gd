@@ -52,6 +52,7 @@ func grow_bubble(delta: float):
 		is_merging = false
 
 	if growth_size >= max_size:
+		GlobalVariables.update_scores()
 		queue_free()
 
 func update_size():

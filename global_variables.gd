@@ -10,3 +10,12 @@ extends Node
 
 @export var curMoney: int = 0;
 @export var curScore: int = 0;
+
+@warning_ignore("unused_signal")
+signal scores_updated
+
+
+func update_scores():
+	curMoney += moneyPerPop
+	curScore += scorePerPop
+	emit_signal("scores_updated")
